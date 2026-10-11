@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search cars here</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+       body {
+            background-color: black;
+            margin: 0px;
+            padding: 0px;
+       }
+       #header{
+            height: 100px;
+            width: 100%;
+            padding: 10px 10px;
+            border-width:0px 0px 2px 0px ;
+            border-color: rgb(206, 60, 16);
+            background-color: black;
+            color: rgb(15, 173, 165);
+            border-style: double;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            border-bottom: 10px solid rgb(15, 173, 165);
+            border-radius: 0%;
+        }
+
+        .logo{
+        
+            width: 50%;
+            display: flex;
+            align-items:start;
+        }
+
+        .logo img{
+
+            height: 90px;
+            width: 80px;
+        }
+        
+
+
+        .h1 {
+            margin-top: 0px;
+            color: rgb(15, 173, 165);
+            text-shadow: 2px 2px 4px white;
+            font-size: 25px;
+            text-align: center;
+            padding-right: 35%;
+            width: 50%;
+        }
+         
+        .line {
+            margin-top: 0px;
+            color: white;
+            font-size: 25px;
+            text-align: center;
+        }
+        #carola {
+            margin-top: 60px;
+            color:rgb(46, 235, 225);
+            font-size: 25px;
+            margin-bottom: 0%;
+        }
+    
+          
+        .carolacontainer { 
+            display: flex;
+            margin-top: 0px;
+            
+            
+            gap: 30px;
+            padding: 0px 10px;
+         }
+
+
+        .carolaparagraph {
+            margin-top:0px ; 
+            width: 55%;
+            color: white; 
+            font-size: 20px;
+              
+        }
+        .imgcarola {
+            width: 65%;
+            display:flex;
+            justify-content:flex-end;
+             overflow: hidden;
+             position: relative;
+        }
+        
+         .imgcarola img {
+            width: 500px;
+            height: 400px;
+            border: 2px solid rgb(15, 173, 165);
+            object-fit: cover;
+           
+        }
+        .imgcarola:hover{
+        transform: scale(1.1); 
+        
+        }
+
+
+          #honda {
+            margin-top: 60px;
+            color:rgb(46, 235, 225);
+            font-size: 25px;
+            margin-bottom: 0%;
+        }
+    
+          
+        .hondacontainer { 
+            display: flex;
+            margin-top: 0px;
+            gap: 30px;
+            padding: 0px 10px;
+         }
+
+
+        .hondaparagraph {
+            margin-top:0px ; 
+            width: 55%;
+            color: white; 
+            font-size: 20px;
+              
+        }
+        .imghonda {
+            width: 65%;
+            display:flex;
+            justify-content:flex-end;
+        }
+        
+         .imghonda img {
+            width: 500px;
+            height: 400px;
+            border: 2px solid rgb(15, 173, 165);
+        }
+        .imghonda:hover{
+        transform: scale(1.1); 
+        
+        
+        }  
+        
+         #BMW {
+            margin-top: 60px;
+            color:rgb(46, 235, 225);
+            font-size: 25px;
+            margin-bottom: 0%;
+        }
+    
+          
+        .BMWcontainer { 
+            display: flex;
+            margin-top: 0px;
+            gap: 30px;
+            padding: 0px 10px;
+         }
+
+
+        .BMWparagraph {
+            margin-top:0px ; 
+            width: 55%;
+            color: white; 
+            font-size: 20px;
+              
+        }
+        .imgBMW {
+            width: 65%;
+            display:flex;
+            justify-content:flex-end;
+        }
+        
+         .imgBMW img {
+            width: 500px;
+            height: 400px;
+            border: 2px solid rgb(15, 173, 165);
+        }
+        .imgBMW:hover{
+        transform: scale(1.1); 
+        }  
+  
+        #tesla {
+            margin-top: 60px;
+            color:rgb(46, 235, 225);
+            font-size: 25px;
+            margin-bottom: 0%;
+        }
+    
+          
+        .teslacontainer { 
+            display: flex;
+            margin-top: 0px;
+            gap: 30px;
+            padding: 0px 10px;
+         }
+
+
+        .teslaparagraph {
+            margin-top:0px ; 
+            width: 55%;
+            color: white; 
+            font-size: 20px;
+              
+        }
+        .imgtesla {
+            width: 65%;
+            display:flex;
+            justify-content:flex-end;
+        }
+        
+         .imgtesla img {
+            width: 500px;
+            height: 400px;
+            border: 2px solid rgb(15, 173, 165);
+        }
+        .imgtesla:hover{
+        transform: scale(1.1); 
+        }  
+
+         .GRID {
+                background-color:rgb(15, 173, 165) ;
+                color: black;
+                font-size: 35px;
+                border: 5px solid black;
+
+                }
+                
+                          
+            
+            .container {
+             display: flex;
+             background-color: rgb(15, 173, 165);
+             justify-content: center;
+             
+             }
+
+            .container div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 24px; 
+             }
+
+             .container div:hover {
+                background-color: black !important; 
+                 
+             }
+               a:hover {
+                    color: rgb(21, 172, 177) !important;
+                }
+
+               a:visited {
+                  color: black;
+                }
+                
+                a:active {
+                    color: blue !important;
+                }
+
+ /*  TABLET VIEW (768px - 1024px) */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    
+    #header {
+        width: 100%;
+        height: auto;
+        min-height: 90px;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 20%;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    .h1 {
+        width: 80%;
+        margin: 0;
+        padding-right: 0;
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .line {
+        font-size: 21px;
+        line-height: 1.5;
+        padding: 0 15px;
+    }
+
+    
+    #carola,
+    #honda,
+    #BMW,
+    #tesla {
+        margin-top: 40px;
+        padding: 0 15px;
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .carolacontainer,
+    .hondacontainer,
+    .BMWcontainer,
+    .teslacontainer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .carolaparagraph,
+    .hondaparagraph,
+    .BMWparagraph,
+    .teslaparagraph {
+        width: 50%;
+        min-width: 0;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .imgcarola,
+    .imghonda,
+    .imgBMW,
+    .imgtesla {
+        width: 50%;
+        min-width: 0;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .imgcarola img,
+    .imghonda img,
+    .imgBMW img,
+    .imgtesla img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .imgcarola:hover,
+    .imghonda:hover,
+    .imgBMW:hover,
+    .imgtesla:hover {
+        transform: none;
+    }
+
+    
+    .GRID {
+        font-size: 30px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .container div {
+        flex: 1 1 40%;
+        min-width: 200px;
+        margin: 5px;
+        padding: 15px;
+        font-size: 20px;
+    }
+}
+
+
+
+ /*  MOBILE VIEW (481px - 767px)*/
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    
+    #header {
+        width: 100%;
+        height: auto;
+        min-height: 75px;
+        padding: 10px;
+        gap: 8px;
+        justify-content: space-between;
+        border-bottom-width: 6px;
+    }
+
+    .logo {
+        width: auto;
+        flex-shrink: 0;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 55px;
+        object-fit: contain;
+    }
+
+    .h1 {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 23px;
+        line-height: 1.3;
+    }
+
+    .line {
+        font-size: 19px;
+        line-height: 1.6;
+        padding: 0 12px;
+    }
+
+    
+    #carola,
+    #honda,
+    #BMW,
+    #tesla {
+        margin-top: 30px;
+        margin-bottom: 12px;
+        padding: 0 15px;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .carolacontainer,
+    .hondacontainer,
+    .BMWcontainer,
+    .teslacontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .carolaparagraph,
+    .hondaparagraph,
+    .BMWparagraph,
+    .teslaparagraph {
+        width: 100%;
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .imgcarola,
+    .imghonda,
+    .imgBMW,
+    .imgtesla {
+        width: 100%;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .imgcarola img,
+    .imghonda img,
+    .imgBMW img,
+    .imgtesla img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5 / 3;
+        object-fit: cover;
+        border: 2px solid rgb(15, 173, 165);
+        border-radius: 8px;
+    }
+
+    .imgcarola:hover,
+    .imghonda:hover,
+    .imgBMW:hover,
+    .imgtesla:hover {
+        transform: none;
+    }
+
+    
+    .GRID {
+        font-size: 27px;
+        padding: 10px;
+        border-width: 3px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .container div {
+        flex: 1 1 45%;
+        min-width: 180px;
+        margin: 4px;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+
+/* SMALL MOBILE VIEW (480px and below)*/
+
+@media screen and (max-width: 480px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    #header {
+        width: 100%;
+        height: auto;
+        min-height: 65px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        border-bottom-width: 5px;
+    }
+
+    .logo {
+        width: auto;
+        flex-shrink: 0;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+    .h1 {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        font-size: clamp(17px, 5vw, 22px);
+        line-height: 1.3;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .line {
+        margin: 0;
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+  
+    #carola,
+    #honda,
+    #BMW,
+    #tesla {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        padding: 0 12px;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+   
+    .carolacontainer,
+    .hondacontainer,
+    .BMWcontainer,
+    .teslacontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin: 0;
+        padding: 0 12px;
+    }
+
+ 
+    .carolaparagraph,
+    .hondaparagraph,
+    .BMWparagraph,
+    .teslaparagraph {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+   
+    .imgcarola,
+    .imghonda,
+    .imgBMW,
+    .imgtesla {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .imgcarola img,
+    .imghonda img,
+    .imgBMW img,
+    .imgtesla img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border: 2px solid rgb(15, 173, 165);
+        border-radius: 8px;
+    }
+
+   
+    .imgcarola:hover,
+    .imghonda:hover,
+    .imgBMW:hover,
+    .imgtesla:hover {
+        transform: none;
+    }
+
+  
+    .GRID {
+        font-size: 23px;
+        padding: 10px;
+        border-width: 3px;
+    }
+
+  
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .container div {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 14px;
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    a {
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* EXTRA SMALL PHONES (380px and below) */
+
+@media screen and (max-width: 380px) {
+
+    #header {
+        padding: 6px;
+        gap: 5px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 40px;
+    }
+
+    .h1 {
+        font-size: 17px;
+    }
+
+    .line {
+        font-size: 14px;
+    }
+
+    #carola,
+    #honda,
+    #BMW,
+    #tesla {
+        font-size: 20px;
+    }
+
+    .carolaparagraph,
+    .hondaparagraph,
+    .BMWparagraph,
+    .teslaparagraph {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .carolacontainer,
+    .hondacontainer,
+    .BMWcontainer,
+    .teslacontainer {
+        padding: 0 8px;
+    }
+
+    .GRID {
+        font-size: 20px;
+    }
+
+    .container div {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+         </style>
+</head>
+
+<body>
+      <div id="header">
+
+
+        <div class="logo">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwMzTtghZZUzY8X4I_waz6tdE-aY3V-QGVbcjE9e6u1hJ1kEZwmXPg-M&s=10"
+                alt="WAJIHA Logo">
+        </div>
+      
+     <div class="h1">
+        <h1>CAR CATEGORIES</h1>
+    </div>
+          </div>
+
+
+    <div class="line">
+        <p>Happiness is not a state to arrive at, but a manner of traveling</p>
+    </div>
+    
+
+     <section class="carolacontainer">
+    <div class="carolaparagraph">
+        <div id="carola">
+        <h2>Toyota Corolla</h2>
+        </div> 
+
+    
+         <p>The Toyota Corolla is the best-selling car in automotive history.</p>
+
+        <p>The Toyota Corolla is one of the most popular cars in the world, 
+            known for its stylish design, reliability, and excellent fuel efficiency. 
+            It offers a comfortable interior, modern features, and a smooth driving experience.
+            The Corolla is suitable for families as well as individuals who want a dependable car for daily use.
+            It is also known for its durability, low maintenance costs, and strong resale value.
+            With its combination of comfort, performance, and safety features, 
+            the Toyota Corolla is a great choice for people looking for a practical and reliable vehicle.</p>
+
+    </div>
+    <div class="imgcarola">
+        <img 
+        src="https://sehgalmotors.pk/cdn/shop/articles/088D84A0-45EE-4CF2-8C56-E244B9B14EC9.png?v=1791121923&width=600" alt="carola car">
+    
+    </div>
+    </section>
+    <br><br>
+
+         <section class="hondacontainer">
+    <div class="hondaparagraph">
+        <div id="honda">
+        <h2>HONDA CIVIC</h2>
+        </div> 
+
+    
+         <p>The Honda Civics is the best-selling car in automotive history.</p>
+
+        <p>The Honda Civic is a stylish and popular car known for its modern design, comfortable interior, and reliable performance. 
+            It offers a smooth driving experience, good fuel efficiency, and advanced safety features.
+            The Civic has a sporty appearance that makes it attractive to young drivers and families.
+            Its spacious interior, modern technology, and powerful engine make it suitable for both city driving and long journeys.
+            Overall, the Honda Civic is an excellent choice for people looking for a combination of style, comfort, and performance.
+
+        </p>
+
+    </div>
+    <div class="imghonda">
+        <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnRkIAk6Z9Wp7eVX-rwpo8o6mvveogVogoMAdeGsgjcILOE5IO4WtrXw&s=10" alt="HONDA CIVIC">
+    
+    </div>
+    </section>
+     <br><br>
+
+         <section class="BMWcontainer">
+    <div class="BMWparagraph">
+        <div id="BMW">
+        <h2>BMW 3 Series</h2>
+        </div> 
+
+    
+         <p>The BMW 3 Series is the best-selling car in automotive history.</p>
+
+        <p>The BMW 3 Series is a luxury car known for its elegant design, powerful performance, and comfortable interior.
+          It offers a smooth driving experience, advanced technology, and modern safety features.
+          The car has a sporty appearance and a well-designed cabin that provides both comfort and style. 
+          Its powerful engine and excellent handling make it enjoyable to drive on city roads and highways.
+          The BMW 3 Series is a great choice for people who want a combination of luxury, performance, and reliability.
+        </p>
+
+    </div>
+    <div class="imgBMW">
+        <img 
+        src="https://static.vecteezy.com/system/resources/thumbnails/055/947/225/small/a-black-car-is-driving-down-a-road-with-smoke-coming-out-of-its-exhaust-photo.jpeg" alt="BMW 3 Series">
+    
+    </div>
+    </section>
+    <br><br>
+         <section class="teslacontainer">
+    <div class="teslaparagraph">
+        <div id="tesla">
+        <h2>Tesla Model</h2>
+        </div> 
+
+    
+         <p>The Tesla Model 3 is the best-selling car in automotive history.</p>
+
+        <p>
+            The Tesla Model 3 is a modern electric car known for its stylish design, impressive performance, and advanced technology. 
+            It offers a smooth and quiet driving experience without using petrol.
+             The car features a minimalist interior, a large touchscreen, and useful driver-assistance features.
+              Its electric motor provides quick acceleration, while its battery allows it to travel long distances on a single charge, depending on the model. 
+            The Tesla Model 3 is an excellent choice for people who want an eco-friendly vehicle with comfort, efficiency, and modern features.
+        </p>
+
+    </div>
+    <div class="imgtesla">
+        <img 
+        src="https://images.pistonheads.com/nimg/46561/mceu_17918722011670012450449.jpg" alt="HONDA CIVIC">
+    
+    </div>
+    </section>
+     <br><br>
+     
+     </div>
+    <div class="GRID"> 
+     
+    <span></span>
+            <ul>
+                <li>
+                    <a href="BESTCARS.html"download>
+                         <div class="container">
+                         <div>HOME</div>
+                         </a>
+                         <a href="gridonly.html"download>
+                         <div>2</div>
+                         </a>
+                         <a href="animationcss.html"download>
+                         <div>3</div>
+                         </a>
+                    
+                </li>
+           </ul>
+</div>
+    </div>
+   
+
+
+
+
+</body>
+</html>
+
+
+
+
+
